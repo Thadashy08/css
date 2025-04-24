@@ -1,0 +1,14 @@
+<button [routerLink]="['/categorias']" class="btn-volver">← Volver a Categorías</button>
+
+<div class="contenedor">
+  <h2>Mis Hábitos Diarios</h2>
+
+  <ul class="lista">
+    <li *ngFor="let tarea of tareas; let i = index">
+      <label>
+        <input type="checkbox" [(ngModel)]="tarea.completado" (change)="toggleTarea(i)" />
+        {{ tarea.nombre }}
+      </label>
+    </li>
+  </ul>
+</div>

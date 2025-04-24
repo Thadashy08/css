@@ -1,0 +1,14 @@
+
+<div class="contenedor">
+    <h2>Categorías</h2>
+        <ul>
+        <li *ngFor="let cat of categorias">
+            <a [routerLink]="['/categorias', cat, 'notas']">
+            {{ cat }}
+            </a>
+        </li>
+        </ul>
+
+    <button class="btn-habitos" (click)="irAHabitos()">Ir a Hábitos</button>
+  </div>
+  
