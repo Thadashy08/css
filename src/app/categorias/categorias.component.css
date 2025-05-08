@@ -1,36 +1,64 @@
-
+.body{
+  background-image: url(https://images8.alphacoders.com/954/954228.jpg);
+}
 .contenedor {
-    max-width: 400px;
-    margin: auto;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .lista {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .lista li {
-    background-color: #e0e0e0;
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .lista li:hover {
-    background-color: #d2d2d2;
-  }
-  
-  .btn-habitos {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #FFF8F8;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.contenedor h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333333;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 10px;
+}
+
+.contenedor ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contenedor li {
+  margin: 10px 0;
+}
+
+.contenedor a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contenedor a:hover {
+  color: #005599;
+  text-decoration: underline;
+}
+
+.btn-habitos {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-habitos:hover {
+  background-color: #005599;
+  transform: translateY(-2px);
+}
+
+.btn-habitos:active {
+  transform: scale(0.98);
+}

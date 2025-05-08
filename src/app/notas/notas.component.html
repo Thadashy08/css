@@ -1,24 +1,27 @@
+<div class="contenedor">
 
+  <button [routerLink]="['/categorias']" class="btn-volver">← Volver a Categorías</button>
 
-<button [routerLink]="['/categorias']" class="btn-volver">← Volver a Categorías</button>
+  <h2>Notas de {{ categoria }}</h2>
 
+  <ul>
+    <li *ngFor="let nota of notas; index as i">
+      <div *ngIf="notaEditandoIndex !== i">
+        {{ nota }}
+        <button (click)="editarNota(i)">✏️</button>
+        <button (click)="eliminarNota(i)">🗑️</button>
+      </div>
+      <div *ngIf="notaEditandoIndex === i">
+        <input [(ngModel)]="notaEditada" />
+        <button (click)="guardarEdicion(i)">💾 Guardar</button>
+        <button (click)="cancelarEdicion()">❌ Cancelar</button>
+      </div>
+    </li>
+  </ul>
 
-<h2>Notas de {{ categoria }}</h2>
+  <div class="agregar-nota-container">
+    <input [(ngModel)]="nuevaNota" placeholder="Nueva nota" />
+    <button (click)="agregarNota()">Agregar nota</button>
+  </div>
 
-<ul>
-  <li *ngFor="let nota of notas; index as i">
-    <div *ngIf="notaEditandoIndex !== i">
-      {{ nota }}
-      <button (click)="editarNota(i)">✏️</button>
-      <button (click)="eliminarNota(i)">🗑️</button>
-    </div>
-    <div *ngIf="notaEditandoIndex === i">
-      <input [(ngModel)]="notaEditada" />
-      <button (click)="guardarEdicion(i)">💾 Guardar</button>
-      <button (click)="cancelarEdicion()">❌ Cancelar</button>
-    </div>
-  </li>
-</ul>
-
-<input [(ngModel)]="nuevaNota" placeholder="Nueva nota" />
-<button (click)="agregarNota()">Agregar nota</button>
+</div>
