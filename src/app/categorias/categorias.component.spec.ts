@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';  // Importar el RouterTestingModule
 import { CategoriasComponent } from './categorias.component';
 
 describe('CategoriasComponent', () => {
@@ -8,7 +8,7 @@ describe('CategoriasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CategoriasComponent]
+      imports: [CategoriasComponent, RouterTestingModule]  // Agregar RouterTestingModule aquí
     })
     .compileComponents();
 

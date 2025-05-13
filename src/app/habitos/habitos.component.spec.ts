@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 import { HabitosComponent } from './habitos.component';
 
@@ -8,9 +10,17 @@ describe('HabitosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HabitosComponent]
-    })
-    .compileComponents();
+      imports: [HabitosComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            params: of({}),
+            snapshot: { paramMap: new Map() }
+          }
+        }
+      ]
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HabitosComponent);
     component = fixture.componentInstance;
